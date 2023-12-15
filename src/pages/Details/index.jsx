@@ -1,9 +1,12 @@
 import { Container } from "./styles.js";
+import { Button } from "../../components/button/index.jsx";
+import { Header } from "../../components/header/index.jsx";
 
 export function Details() {
   return (
     <Container>
-      <h1>Details</h1>
+      <Header />
+      <Button title="Voltar"/>
     </Container>
   );
 }
