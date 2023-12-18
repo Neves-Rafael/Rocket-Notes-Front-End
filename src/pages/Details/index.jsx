@@ -2,12 +2,14 @@ import { Container, Links } from "./styles.js";
 import { Button } from "../../components/Button/index.jsx";
 import { Header } from "../../components/Header/index.jsx";
 import { Section } from "../../components/Section/index.jsx";
+import { ButtonText } from "../../components/ButtonText/index.jsx";
 import { Tag } from "../../components/Tag/index.jsx";
 
 export function Details() {
   return (
     <Container>
       <Header />
+      <ButtonText title="Excluir nota" />
 
       <Section title="Links úteis">
         <Links>
