@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { NewNote } from "./pages/NewNote";
+import { Routes } from "./routes";
 
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/global";
@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <NewNote />
+      <Routes />
     </ThemeProvider>
   </React.StrictMode>
 );
