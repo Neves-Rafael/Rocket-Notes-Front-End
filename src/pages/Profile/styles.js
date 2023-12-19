@@ -39,7 +39,7 @@ export const Avatar = styled.div`
     height: 18.6rem;
     border-radius: 50%;
   }
-  >label{
+  > label {
     width: 4.8rem;
     height: 4.8rem;
 
@@ -50,8 +50,8 @@ export const Avatar = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: .7rem;
-    right: .7rem;
+    bottom: 0.7rem;
+    right: 0.7rem;
 
     cursor: pointer;
 
@@ -59,10 +59,10 @@ export const Avatar = styled.div`
       display: none;
     }
 
-    svg{
-        width: 2rem;
-        height: 2rem;
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
   }
 `;

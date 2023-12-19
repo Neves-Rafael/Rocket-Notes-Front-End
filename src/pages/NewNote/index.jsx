@@ -32,7 +32,7 @@ export function NewNote() {
               <NoteItem isNew placeholder="New tag" />
             </div>
           </Section>
-        <Button title="Save"/>
+          <Button title="Save" />
         </Form>
       </main>
     </Container>

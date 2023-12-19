@@ -19,16 +19,13 @@ export const Container = styled.div`
 export const Links = styled.ul`
   list-style: none;
 
-
   > li {
     margin-top: 1.2rem;
 
     a {
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
-
   }
-  
 `;
 
 export const Content = styled.div`
@@ -42,15 +39,14 @@ export const Content = styled.div`
     align-self: end;
   }
 
-  >h1 {
+  > h1 {
     font-size: 3.6rem;
     font-weight: 500;
     padding-top: 6.4rem;
   }
 
-  >p{
+  > p {
     font-size: 1.6rem;
     margin-top: 1.6rem;
-
   }
-`
+`;

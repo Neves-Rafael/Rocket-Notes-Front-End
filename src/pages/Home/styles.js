@@ -22,11 +22,11 @@ export const Brand = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-  >h1{
+  > h1 {
     font-size: 2.4rem;
-    color: ${({theme}) => theme.COLORS.ORANGE};
+    color: ${({ theme }) => theme.COLORS.ORANGE};
   }
-`; 
+`;
 
 export const Menu = styled.ul`
   grid-area: menu;
@@ -34,7 +34,7 @@ export const Menu = styled.ul`
   padding-top: 6.4rem;
   text-align: center;
 
-  >li{
+  > li {
     margin-bottom: 2.4rem;
   }
 `;
@@ -46,7 +46,7 @@ export const Search = styled.div`
 
 export const Content = styled.div`
   grid-area: content;
-  padding: 0 6.4rem ;
+  padding: 0 6.4rem;
   overflow-y: auto;
 `;
 
@@ -59,7 +59,7 @@ export const NewNote = styled(Link)`
   align-items: center;
   justify-content: center;
 
-  >svg{
-    margin-right: .8rem;
+  > svg {
+    margin-right: 0.8rem;
   }
 `;

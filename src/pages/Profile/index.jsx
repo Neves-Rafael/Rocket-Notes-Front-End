@@ -15,11 +15,11 @@ export function Profile() {
 
       <Form>
         <Avatar>
-            <img src="https://github.com/Neves-Rafael.png" alt="User Image" />
-            <label htmlFor="avatar">
-              <FiCamera />
-              <input type="file" id="avatar" />
-            </label>
+          <img src="https://github.com/Neves-Rafael.png" alt="User Image" />
+          <label htmlFor="avatar">
+            <FiCamera />
+            <input type="file" id="avatar" />
+          </label>
         </Avatar>
         <Input placeholder="Name" type="text" icon={FiUser} />
         <Input placeholder="E-mail" type="text" icon={FiMail} />
