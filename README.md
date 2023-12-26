@@ -18,7 +18,7 @@
 <h1 align="center">⚙️ Principais telas</h1>
 
 
-<h3 align="center">⭐ Profile!</h3>
+<h3 align="center">⭐ Perfil!</h3>
 
 <p align="center">
   <img width="700px" src="https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/cfbec261-465b-427c-97a7-bddb6112b499">
