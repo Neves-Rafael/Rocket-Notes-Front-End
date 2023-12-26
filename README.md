@@ -1,8 +1,6 @@
-# React + Vite
+<h1 align="center">🌐 Aplicação React</h1>
 
-<h1 align="center">🌐 Aplicação Node</h1>
-
-![image](https://github.com/Neves-Rafael/node-aplication/assets/136202919/1d3aeb53-965c-4c66-b90c-403203a5226c)
+![image](https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/6d65caae-fcc8-4c14-aada-9003ae228a84)
 
 
 
@@ -20,27 +18,27 @@
 <h1 align="center">⚙️ Principais telas</h1>
 
 
-<h3 align="center">⭐ Login!</h3>
+<h3 align="center">⭐ Profile!</h3>
 
 <p align="center">
-  <img width="700px" src="https://github.com/Neves-Rafael/node-aplication/assets/136202919/732acd6a-125a-4533-8df0-362de82c3341">
+  <img width="700px" src="https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/cfbec261-465b-427c-97a7-bddb6112b499">
 </p>
 
-<h3 align="center">⭐ Criação, visualização e exclusão de Notas vinculadas aos usuários!</h3>
+<h3 align="center">⭐ Criação De Nota!</h3>
 <p align="center">
-  <img width="700px" src="https://github.com/Neves-Rafael/node-aplication/assets/136202919/9f372a88-2101-4ed5-b1c6-e356b89ce4a3">
+  <img width="700px" src="https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/ac678b8c-29e0-47af-841a-28b3790d8245">
 </p>
 
-<h3 align="center">⭐ Verificação de cada etapa retornando mensagem de erro personalizada para cada situação!</h3>
+<h3 align="center">⭐ Visualização da Nota!</h3>
 <p align="center">
-  <img width="700px" src="https://github.com/Neves-Rafael/node-aplication/assets/136202919/bdc319bc-09bd-42c9-9b8b-56ead77cab2a">
+  <img width="700px" src="https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/0aef7396-c497-4ce6-84d8-9a13ee89fcd4">
 </p>
 
 
 <h2 align="center">🧱 Pré-requisitos</h2>
 <br/>
 
-<p align="center">Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: <a href="https://git-scm.com">Git</a>, insomnia, Beekeeper <br/>
+<p align="center">Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: <a href="https://git-scm.com">Git</a><br/>
 Além disto é bom ter um editor para trabalhar com o código como <a href="https://code.visualstudio.com/">VSCode</a></p>
 <br/>
 <br/>
