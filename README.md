@@ -1,4 +1,4 @@
-<h1 align="center">🌐 Aplicação React</h1>
+<h1 align="center">🌐 RocketNotes</h1>
 
 ![image](https://github.com/Neves-Rafael/Rocket-Notes-Front-End/assets/136202919/6d65caae-fcc8-4c14-aada-9003ae228a84)
 
