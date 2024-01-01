@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
 
-  background-color: ${({ theme, isNew }) =>
-    isNew ? "transparent" : theme.COLORS.BACKGROUND_900};
+  background-color: ${({ theme, $isnew }) =>
+    $isnew ? "transparent" : theme.COLORS.BACKGROUND_900};
 
   color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-  border: ${({ theme, isNew }) =>
-    isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
+  border: ${({ theme, $isnew }) =>
+    $isnew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
 
   margin-bottom: 0.8rem;
   border-radius: 1rem;
