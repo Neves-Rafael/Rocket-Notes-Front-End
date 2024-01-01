@@ -9,10 +9,10 @@ function AuthProvider({ children }) {
   async function signIn({email, password}){
     try {
       const response = await api.post("/sessions", {email, password});
-      const { use, token} = response.data
+      const { user, token} = response.data
       
       api.defaults.headers.authorization = `Bearer ${token}`;
-      setData({use, token});
+      setData({user, token});
 
     } catch (error) {
       if(error.response){
