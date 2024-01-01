@@ -25,7 +25,7 @@ export function Profile() {
       old_password: passwordOld
     }
 
-    await updateProfile({user})
+    await updateProfile({user, avatarFile})
   }
 
   function handleChangeAvatar(event){
