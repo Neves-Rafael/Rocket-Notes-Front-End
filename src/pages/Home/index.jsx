@@ -15,7 +15,14 @@ export function Home() {
   const [tagsSelected, setTagsSelected] = useState([]);
 
   function handleTagSelected(tagName) {
-    setTagsSelected(prevState => [...prevState, tagName]);
+    const alreadySelected = tagsSelected.includes(tagName);
+
+    if (alreadySelected) {
+      const filteredTags = tagsSelected.filter(tag => tag !== tagName);
+      setTagsSelected(filteredTags);
+    } else {
+      setTagsSelected((prevState) => [...prevState, tagName]);
+    }
   }
 
   useEffect(() => {
