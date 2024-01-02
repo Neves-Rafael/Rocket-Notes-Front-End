@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import { Container, Form } from "./styles";
 import { Header } from "../../components/Header";
@@ -8,6 +7,7 @@ import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,10 @@ export function NewNote() {
   const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
+
+  function handleBack(){
+    navigate(-1)
+  }
 
   function handleAddLink() {
     setLinks((prevState) => [...prevState, newLink]);
@@ -92,7 +96,7 @@ export function NewNote() {
         <Form>
           <header>
             <h1>Create Note</h1>
-            <Link to="/">Back</Link>
+            <ButtonText title="voltar" onClick={handleBack} />
           </header>
 
           <Input
