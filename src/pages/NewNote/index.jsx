@@ -118,7 +118,7 @@ export function NewNote() {
               />
             </div>
           </Section>
-          <Button title="Save" onClick={handleNewNote} />
+          <Button title="Save" onClick={() => handleNewNote()} />
         </Form>
       </main>
     </Container>
