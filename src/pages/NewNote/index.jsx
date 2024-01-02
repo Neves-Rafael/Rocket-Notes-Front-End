@@ -62,8 +62,16 @@ export function NewNote() {
       return
     }
 
-    if(links){
-      alert("Por favor, adicione todos os links.")
+    if(links.length === 0) {
+      alert("Você está adicionando sem nenhum link!")
+      setLinks([""]);
+      return
+    }
+
+    if(tags.length === 0) {
+      alert("você está adicionando nenhuma tag!")
+      setTags([""]);
+      return
     }
 
     await api.post("/notes", {
