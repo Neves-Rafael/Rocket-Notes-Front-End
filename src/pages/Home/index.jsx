@@ -12,6 +12,11 @@ import { api } from "../../services/api";
 
 export function Home() {
   const [tags, setTags] = useState([]);
+  const [tagsSelected, setTagsSelected] = useState([]);
+
+  function handleTagSelected(tagName) {
+    setTagsSelected([tagName]);
+  }
 
   useEffect(() => {
     async function fetchTags() {
@@ -32,16 +37,24 @@ export function Home() {
 
       <Menu>
         <li>
-          <ButtonText title="Todos" $isactive={true} />
+          <ButtonText
+            title="Todos"
+            $isactive={tagsSelected.length === 0}
+            onClick={() => setTagsSelected("all")}
+          />
         </li>
-        {
-        tags && tags.map((tag) => {
+        {tags &&
+          tags.map((tag) => {
             if (tag.name === "") {
               return;
             }
             return (
               <li key={String(tag.id)}>
-                <ButtonText title={tag.name} />
+                <ButtonText
+                  title={tag.name}
+                  onClick={() => handleTagSelected(tag.name)}
+                  $isactive={tagsSelected.includes(tag.name)}
+                />
               </li>
             );
           })}
