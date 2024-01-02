@@ -43,15 +43,38 @@ export function NewNote() {
   }
 
   async function handleNewNote() {
-    await api.post("/notes",{
+    if (!title) {
+      alert("Por favor , insira um titulo para a sua nota!");
+      return
+    }
+
+    if (newLink) {
+      alert(
+        "Existe um link no note que ainda não foi adicionado. Por favor, adicione todos os links."
+      );
+      return
+    }
+
+    if (newTag) {
+      alert(
+        "Existe uma tag no note que ainda não foi adicionada. Por favor, adicione todas as tags."
+      );
+      return
+    }
+
+    if(links){
+      alert("Por favor, adicione todos os links.")
+    }
+
+    await api.post("/notes", {
       title,
       description,
       tags,
-      links
-    })
+      links,
+    });
 
-    alert("Note created successfully")
-    navigate("/")
+    alert("Note created successfully");
+    navigate("/");
   }
 
   return (
