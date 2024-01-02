@@ -5,43 +5,53 @@ import { Section } from "../../components/Section/index.jsx";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 import { Tag } from "../../components/Tag/index.jsx";
 
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api.js";
+
 export function Details() {
+  const [data, setData] = useState(null);
+
+  const params = useParams();
+
+  useEffect(() => {
+    async function fetchNote() {
+      const response = await api.get(`/notes/${params.id}`);
+      setData(response.data);
+    }
+    fetchNote();
+  }, []);
+
   return (
     <Container>
       <Header />
 
-      <main>
-        <Content>
-          <ButtonText title="Excluir nota" />
+      {data && (
+        <main>
+          <Content>
+            <ButtonText title="Excluir nota" />
 
-          <h1>Introduction to React</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-            dicta odit commodi natus atque, perspiciatis ut enim reprehenderit
-            doloremque voluptate maxime ad dolorum nisi ratione sunt quibusdam
-            pariatur blanditiis cum.
-          </p>
+            <h1>{data.title}</h1>
+            <p>{data.description}</p>
 
-          <Section title="Links úteis">
-            <Links>
-              <li>
-                <a href="#">Link 1</a>
-              </li>
-              <li>
-                <a href="#">Link 2</a>
-              </li>
-            </Links>
-          </Section>
+            <Section title="Links úteis">
+              <Links>
+                <li>
+                  <a href="#">{data.link}</a>
+                </li>
+              </Links>
+            </Section>
 
-          <Section title="Marcadores">
-            <Tag title="Tranquilo" />
-            <Tag title="Importante" />
-            <Tag title="Urgente" />
-          </Section>
+            <Section title="Marcadores">
+              <Tag title="Tranquilo" />
+              <Tag title="Importante" />
+              <Tag title="Urgente" />
+            </Section>
 
-          <Button title="Back" />
-        </Content>
-      </main>
+            <Button title="Back" />
+          </Content>
+        </main>
+      )}
     </Container>
   );
 }
