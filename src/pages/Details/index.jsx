@@ -5,7 +5,7 @@ import { Section } from "../../components/Section/index.jsx";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 import { Tag } from "../../components/Tag/index.jsx";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api.js";
 
@@ -13,6 +13,11 @@ export function Details() {
   const [data, setData] = useState(null);
 
   const params = useParams();
+  const navigate = useNavigate();
+
+  function handleBack(){
+    navigate("/")
+  }
 
   useEffect(() => {
     async function fetchNote() {
@@ -54,7 +59,7 @@ export function Details() {
               </Section>
             )}
 
-            <Button title="Back" />
+            <Button title="Back" onClick={handleBack} />
           </Content>
         </main>
       )}
