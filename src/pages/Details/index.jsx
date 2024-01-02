@@ -39,18 +39,20 @@ export function Details() {
                 <Links>
                   {data.links.map((link) => (
                     <li key={String(link.id)}>
-                      <a href={link.url}>{link.url}</a>
+                      <a href={link.url} target="_blank">{link.url}</a>
                     </li>
                   ))}
                 </Links>
               </Section>
             )}
 
-            <Section title="Marcadores">
-              <Tag title="Tranquilo" />
-              <Tag title="Importante" />
-              <Tag title="Urgente" />
-            </Section>
+            {data.tags && (
+              <Section title="Marcadores">
+                {data.tags.map((tag) => (
+                  <Tag title={tag.name} key={String(tag.id)} />
+                ))}
+              </Section>
+            )}
 
             <Button title="Back" />
           </Content>
