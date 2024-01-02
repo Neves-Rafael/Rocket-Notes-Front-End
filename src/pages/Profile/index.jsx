@@ -2,12 +2,12 @@ import { Container, Form, Avatar } from "./styles";
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
+import { useNavigate } from "react-router-dom";
 
-import {api} from "../../services/api";
-import avatarPlaceholder from "../../assets/background.jpg"
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/background.jpg";
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -17,22 +17,30 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
-  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
 
-  async function handleUpdate(){
+  const navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1);
+  }
+
+  async function handleUpdate() {
     const user = {
       name,
       email,
       password: passwordNew,
-      old_password: passwordOld
-    }
+      old_password: passwordOld,
+    };
 
-    await updateProfile({user, avatarFile})
+    await updateProfile({ user, avatarFile });
   }
 
-  function handleChangeAvatar(event){
+  function handleChangeAvatar(event) {
     const file = event.target.files[0];
     setAvatarFile(file);
 
@@ -43,9 +51,9 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <Link to="/">
+        <button type="button" onClick={handleBack}>
           <FiArrowLeft />
-        </Link>
+        </button>
       </header>
 
       <Form>
@@ -82,7 +90,7 @@ export function Profile() {
           icon={FiLock}
           onChange={(e) => setPasswordNew(e.target.value)}
         />
-        <Button title="Update" onClick={handleUpdate}/>
+        <Button title="Update" onClick={handleUpdate} />
       </Form>
     </Container>
   );
