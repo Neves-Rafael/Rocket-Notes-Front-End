@@ -15,7 +15,7 @@ export function Home() {
   const [tagsSelected, setTagsSelected] = useState([]);
 
   function handleTagSelected(tagName) {
-    setTagsSelected([tagName]);
+    setTagsSelected(prevState => [...prevState, tagName]);
   }
 
   useEffect(() => {
