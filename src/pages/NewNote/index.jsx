@@ -67,7 +67,9 @@ export function NewNote() {
 
           <Section title="Tags">
             <div className="tags">
-              <NoteItem value="React" />
+              {tags.map((tag, index) => {
+                return(<NoteItem key={String(index)} value={tag} onClick={() => {}} />);
+              })}
 
               <NoteItem
                 $isnew
