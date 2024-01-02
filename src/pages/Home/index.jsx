@@ -36,7 +36,9 @@ export function Home() {
         </li>
         {
         tags && tags.map((tag) => {
-
+            if (tag.name === "") {
+              return;
+            }
             return (
               <li key={String(tag.id)}>
                 <ButtonText title={tag.name} />
