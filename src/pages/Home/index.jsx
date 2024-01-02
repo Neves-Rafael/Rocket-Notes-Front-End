@@ -7,7 +7,21 @@ import { ButtonText } from "../../components/ButtonText";
 import { Note } from "../../components/Note";
 import { Section } from "../../components/Section";
 
+import { useState, useEffect } from "react";
+import { api } from "../../services/api";
+
 export function Home() {
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    async function fetchTags() {
+      const response = await api.get("/tags");
+      setTags(response.data);
+    }
+
+    fetchTags();
+  }, []);
+
   return (
     <Container>
       <Brand>
@@ -18,20 +32,17 @@ export function Home() {
 
       <Menu>
         <li>
-          <ButtonText title="All" $isactive={true} />
+          <ButtonText title="Todos" $isactive={true} />
         </li>
-        <li>
-          <ButtonText title="React" />
-        </li>
-        <li>
-          <ButtonText title="NodeJs" />
-        </li>
-        <li>
-          <ButtonText title="Vue" />
-        </li>
-        <li>
-          <ButtonText title="Angular" />
-        </li>
+        {
+        tags && tags.map((tag) => {
+
+            return (
+              <li key={String(tag.id)}>
+                <ButtonText title={tag.name} />
+              </li>
+            );
+          })}
       </Menu>
 
       <Search>
