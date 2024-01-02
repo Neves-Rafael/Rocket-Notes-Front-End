@@ -90,7 +90,7 @@ export function Home() {
       <Content>
         <Section title="My Notes">
           {notes.map((note) => (
-            <Note data={{ note }} key={String(note.id)} />
+            <Note data={note} key={String(note.id)} />
           ))}
         </Section>
       </Content>
