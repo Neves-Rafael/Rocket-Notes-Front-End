@@ -34,13 +34,17 @@ export function Details() {
             <h1>{data.title}</h1>
             <p>{data.description}</p>
 
-            <Section title="Links úteis">
-              <Links>
-                <li>
-                  <a href="#">{data.link}</a>
-                </li>
-              </Links>
-            </Section>
+            {data.links && (
+              <Section title="Links úteis">
+                <Links>
+                  {data.links.map((link) => (
+                    <li key={String(link.id)}>
+                      <a href={link.url}>{link.url}</a>
+                    </li>
+                  ))}
+                </Links>
+              </Section>
+            )}
 
             <Section title="Marcadores">
               <Tag title="Tranquilo" />
