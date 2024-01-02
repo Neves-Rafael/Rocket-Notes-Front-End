@@ -82,7 +82,7 @@ export function NewNote() {
     });
 
     alert("Note created successfully");
-    navigate("/");
+    navigate(-1);
   }
 
   return (
