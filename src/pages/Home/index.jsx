@@ -69,7 +69,7 @@ export function Home() {
       <Menu>
         <li>
           <ButtonText
-            title="Todos"
+            title="All Tags"
             $isactive={tagsSelected.length === 0}
             onClick={() => setTagsSelected("")}
           />

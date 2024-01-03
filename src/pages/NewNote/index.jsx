@@ -96,7 +96,7 @@ export function NewNote() {
         <Form>
           <header>
             <h1>Create Note</h1>
-            <ButtonText title="voltar" onClick={handleBack} />
+            <ButtonText title="Back" onClick={handleBack} />
           </header>
 
           <Input

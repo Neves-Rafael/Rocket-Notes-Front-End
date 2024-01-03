@@ -43,13 +43,13 @@ export function Details() {
       {data && (
         <main>
           <Content>
-            <ButtonText title="Excluir nota" onClick={handleRemove} />
+            <ButtonText title="Delete note" onClick={handleRemove} />
 
             <h1>{data.title}</h1>
             <p>{data.description}</p>
 
             {data.links && (
-              <Section title="Links úteis">
+              <Section title="Useful Links">
                 <Links>
                   {data.links.map((link) => (
                     <li key={String(link.id)}>
@@ -61,7 +61,7 @@ export function Details() {
             )}
 
             {data.tags && (
-              <Section title="Marcadores">
+              <Section title="Tags">
                 {data.tags.map((tag) => (
                   <Tag title={tag.name} key={String(tag.id)} />
                 ))}
