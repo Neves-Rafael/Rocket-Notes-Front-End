@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import { Container, Form } from "./styles";
-import { Header } from "../../components/Headerr";
+import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
-import { ButtonLink } from "../../components/Buttonn";
+import { ButtonLink } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 
 import { api } from "../../services/api";

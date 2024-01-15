@@ -1,9 +1,9 @@
 import { Container, Links, Content } from "./styles.js";
-import { ButtonLink } from "../../components/Button/index.jsx";
-import { Header } from "../../components/Header/index.jsx";
-import { Section } from "../../components/Section/index.jsx";
-import { ButtonText } from "../../components/ButtonText/index.jsx";
-import { Tag } from "../../components/Tag/index.jsx";
+import { ButtonLink } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { Section } from "../../components/Section";
+import { ButtonText } from "../../components/ButtonText";
+import { Tag } from "../../components/Tag";
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
