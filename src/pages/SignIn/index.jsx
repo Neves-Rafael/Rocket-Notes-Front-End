@@ -6,7 +6,7 @@ import { useAuth } from "../../hooks/auth";
 
 import { Container, Form, Background } from "./styles";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { ButtonLink } from "../../components/Button";
 
 export function SignIn() {
   const [email, setEmail] = useState("");
@@ -37,7 +37,7 @@ export function SignIn() {
           icon={FiLock}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button title="Login" onClick={handleSignIn} />
+        <ButtonLink title="Login" onClick={handleSignIn} />
 
         <Link to="/register">Sign Up</Link>
       </Form>

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Container, Form, Background } from "./styles";
 import { Input } from "../../components/Input";
-import { Button } from "../../../src/components/Button";
+import { ButtonLink } from "../../../src/components/Button";
 
 import { api } from "../../services/api";
 
@@ -64,7 +64,7 @@ export function SignUp() {
           icon={FiLock}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button title="Register" onClick={handleSignUp} />
+        <ButtonLink title="Register" onClick={handleSignUp} />
 
         <Link to="/">Back To Login</Link>
       </Form>

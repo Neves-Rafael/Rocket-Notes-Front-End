@@ -1,5 +1,5 @@
 import { Container, Links, Content } from "./styles.js";
-import { Button } from "../../components/Button/index.jsx";
+import { ButtonLink } from "../../components/Button/index.jsx";
 import { Header } from "../../components/Header/index.jsx";
 import { Section } from "../../components/Section/index.jsx";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
@@ -15,16 +15,16 @@ export function Details() {
   const params = useParams();
   const navigate = useNavigate();
 
-  function handleBack(){
-    navigate(-1)
+  function handleBack() {
+    navigate(-1);
   }
 
-  async function handleRemove(){
+  async function handleRemove() {
     const confirm = window.confirm("Tem certeza que deseja excluir essa nota?");
 
-    if(confirm){
-      await api.delete(`/notes/${params.id}`)
-      navigate(-1)
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`);
+      navigate(-1);
     }
   }
 
@@ -53,7 +53,9 @@ export function Details() {
                 <Links>
                   {data.links.map((link) => (
                     <li key={String(link.id)}>
-                      <a href={link.url} target="_blank">{link.url}</a>
+                      <a href={link.url} target="_blank">
+                        {link.url}
+                      </a>
                     </li>
                   ))}
                 </Links>
@@ -68,7 +70,7 @@ export function Details() {
               </Section>
             )}
 
-            <Button title="Back" onClick={handleBack} />
+            <ButtonLink title="Back" onClick={handleBack} />
           </Content>
         </main>
       )}

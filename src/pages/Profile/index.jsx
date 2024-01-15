@@ -1,7 +1,7 @@
 import { Container, Form, Avatar } from "./styles";
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { ButtonLink } from "../../components/Button";
 import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
 import { useNavigate } from "react-router-dom";
@@ -93,7 +93,7 @@ export function Profile() {
           icon={FiLock}
           onChange={(e) => setPasswordNew(e.target.value)}
         />
-        <Button title="Update" onClick={handleUpdate} />
+        <ButtonLink title="Update" onClick={handleUpdate} />
       </Form>
     </Container>
   );

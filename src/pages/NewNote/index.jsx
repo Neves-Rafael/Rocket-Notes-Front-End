@@ -6,7 +6,7 @@ import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
-import { Button } from "../../components/Button";
+import { ButtonLink } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 
 import { api } from "../../services/api";
@@ -24,8 +24,8 @@ export function NewNote() {
 
   const navigate = useNavigate();
 
-  function handleBack(){
-    navigate(-1)
+  function handleBack() {
+    navigate(-1);
   }
 
   function handleAddLink() {
@@ -49,33 +49,33 @@ export function NewNote() {
   async function handleNewNote() {
     if (!title) {
       alert("Por favor , insira um titulo para a sua nota!");
-      return
+      return;
     }
 
     if (newLink) {
       alert(
         "Existe um link no note que ainda não foi adicionado. Por favor, adicione todos os links."
       );
-      return
+      return;
     }
 
     if (newTag) {
       alert(
         "Existe uma tag no note que ainda não foi adicionada. Por favor, adicione todas as tags."
       );
-      return
+      return;
     }
 
-    if(links.length === 0) {
-      alert("Você está adicionando sem nenhum link!")
+    if (links.length === 0) {
+      alert("Você está adicionando sem nenhum link!");
       setLinks([""]);
-      return
+      return;
     }
 
-    if(tags.length === 0) {
-      alert("você está adicionando nenhuma tag!")
+    if (tags.length === 0) {
+      alert("você está adicionando nenhuma tag!");
       setTags([""]);
-      return
+      return;
     }
 
     await api.post("/notes", {
@@ -153,7 +153,7 @@ export function NewNote() {
               />
             </div>
           </Section>
-          <Button title="Save" onClick={() => handleNewNote()} />
+          <ButtonLink title="Save" onClick={() => handleNewNote()} />
         </Form>
       </main>
     </Container>
