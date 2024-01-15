@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Container, Form, Background } from "./styles";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { Button } from "../../../src/components/Button";
 
 import { api } from "../../services/api";
 
@@ -34,8 +34,6 @@ export function SignUp() {
           alert("Não foi possível cadastrar");
         }
       });
-
-
   }
 
   return (
