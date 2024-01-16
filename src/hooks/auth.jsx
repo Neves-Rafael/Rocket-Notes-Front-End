@@ -20,7 +20,7 @@ function AuthProvider({ children }) {
       if (error.response) {
         alert(error.response.data.message);
       } else {
-        alert("Não foi possível entrar");
+        alert("Error logging in, check and try again!");
       }
     }
   }
@@ -50,13 +50,13 @@ function AuthProvider({ children }) {
         token: data.token
       })
 
-      alert("Seu perfil foi atualizado com sucesso");
+      alert("Profile updated successfully!");
 
     }catch(error){
       if(error.response){
         alert(error.response.data.message);
       }else{
-        alert("Não foi possível atualizar o perfil");
+        alert("Unable to update profile");
       }
     }
   }

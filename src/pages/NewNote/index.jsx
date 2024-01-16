@@ -48,32 +48,32 @@ export function NewNote() {
 
   async function handleNewNote() {
     if (!title) {
-      alert("Por favor , insira um titulo para a sua nota!");
+      alert("Please, enter a title for your note!");
       return;
     }
 
     if (newLink) {
       alert(
-        "Existe um link no note que ainda não foi adicionado. Por favor, adicione todos os links."
+        "There is a link in the note that has not yet been added. Please add all Links!"
       );
       return;
     }
 
     if (newTag) {
       alert(
-        "Existe uma tag no note que ainda não foi adicionada. Por favor, adicione todas as tags."
+        "There is a Tag in the note that has not yet been added. Please add all Tags!"
       );
       return;
     }
 
     if (links.length === 0) {
-      alert("Você está adicionando sem nenhum link!");
+      alert("You are adding without any links!");
       setLinks([""]);
       return;
     }
 
     if (tags.length === 0) {
-      alert("você está adicionando nenhuma tag!");
+      alert("You are not adding tag!");
       setTags([""]);
       return;
     }

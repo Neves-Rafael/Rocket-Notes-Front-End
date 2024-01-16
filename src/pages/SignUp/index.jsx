@@ -17,21 +17,20 @@ export function SignUp() {
 
   function handleSignUp() {
     if (!name || !email || !password) {
-      console.log("chamou a função");
-      return alert("Preencha todos os campos!");
+      return alert("Fill in all the fields!");
     }
 
     api
       .post("/users", { name, email, password })
       .then(() => {
-        alert("Usuário cadastrado com sucesso!");
+        alert("User registered successfully!");
         navigate("/");
       })
       .catch((error) => {
         if (error.response) {
           alert(error.response.data.message);
         } else {
-          alert("Não foi possível cadastrar");
+          alert("Unable to register!");
         }
       });
   }
